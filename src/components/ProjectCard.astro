@@ -1,0 +1,35 @@
+---
+import { marked } from 'marked';
+
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const { title, description, image } = Astro.props;
+
+// Convertir Markdown en HTML
+const renderedDescription = description;
+      // Resumé court Convertir Markdown en HTML
+const shortMarkdown = description.slice(0, 80) + '...';
+const renderedShortDescription = marked(shortMarkdown);
+---
+<!-- Gestion des miniatures -->
+<a
+  class="block group overflow-hidden rounded-xl border border-white/20 hover:scale-105 transition-transform duration-300"
+  href={`/${image}`}
+>
+  <div
+    class="h-64 w-full bg-cover bg-center relative"
+    style={{ backgroundImage: `url(${image}.jpg)` }}
+  >
+    <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-4">
+      <h3 class="text-xl font-bold text-white">{title}</h3>
+      <!-- résumé court -->
+      <p class="text-white/70 text-sm line-clamp-3" set:html={renderedShortDescription}>
+      </p>
+    </div>
+  </div>
+</a>

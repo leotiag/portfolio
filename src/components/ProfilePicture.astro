@@ -1,0 +1,27 @@
+---
+import { translations } from "../i18n/translations";
+import tech1 from '../assets/images/tech1.svg';
+
+const { lang = "en" } = Astro.props; // récupère la langue
+const t = translations[lang];       // objet des traductions
+---
+
+<article class="w-full h-[500px] overflow-hidden flex flex-col items-center justify-center relative md:px-20 xs:px-0">
+
+  <!-- Header avec blockquote bilingue -->
+  <header class="text-center absolute top-0 z-10 flex justify-center w-full">
+    <blockquote
+      class="font-garamond sm:text-[35px] sm:leading-[63px] xxs:text-[30px] xs:text-[16px] max-w-3xl"
+    >
+      {t.welcome_text}
+    </blockquote>
+  </header>
+
+  <!-- Image -->
+  <img
+    src={tech1.src}
+    alt="Portrait of Leonel Tiague"
+    class="w-full max-w-lg h-[400px] mx-auto object-cover object-top rounded-xl shadow-lg transition duration-500 hover:scale-105"
+  />
+
+</article>

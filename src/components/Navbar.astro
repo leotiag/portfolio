@@ -1,0 +1,60 @@
+---
+import { translations } from "../i18n/translations";
+
+const { lang = "en" } = Astro.props;
+
+const t = translations[lang];
+---
+
+<nav class="w-full h-16 bg-black text-white flex items-center justify-between px-6 fixed top-0 z-50">
+
+   <!-- Réseaux sociaux -->
+   <div class="flex gap-4 text-2xl">
+
+   <a href="https://linkedin.com/in/leonel-tiague-691670107" target="_blank" class="opacity-70 hover:opacity-100">
+      <i class='bx bxl-linkedin'></i>
+   </a>
+
+   <a href="https://github.com" target="_blank" class="opacity-70 hover:opacity-100">
+      <i class='bx bxl-github'></i>
+   </a>
+
+   <a href="https://instagram.com" target="_blank" class="opacity-70 hover:opacity-100">
+      <i class='bx bxl-instagram'></i>
+   </a>
+
+   </div>
+
+   <!-- Navigation -->
+   <ul class="flex gap-6">
+
+      <li><a href="#home">{t.home}</a></li>
+      <li><a href="#about">{t.about}</a></li>
+      <li><a href="#technologies">{t.technologies}</a></li>
+      <li><a href="#entreprise">{t.entreprise}</a></li>
+      <li><a href="#particulier">{t.particulier}</a></li>
+      <li><a href="#blog">Blog : "La Tech Simple"</a></li>
+      <li><a href="#contact">{t.contact}</a></li>
+
+   </ul>
+
+   <!-- Choix langue -->
+   <div class="flex gap-2">
+
+      <a
+         href="/portfolio/"
+         class="border border-white px-2 py-1 text-sm rounded hover:bg-white hover:text-black"
+      >
+         EN
+      </a>
+
+      <a
+         href="/portfolio/fr"
+         class="border border-white px-2 py-1 text-sm rounded hover:bg-white hover:text-black"
+      >
+         FR
+      </a>
+
+   </div>
+
+</nav>

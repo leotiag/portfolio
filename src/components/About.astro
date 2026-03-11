@@ -1,0 +1,39 @@
+---
+import { translations } from "../i18n/translations";
+import essec3 from '../assets/images/essec3.jpg';
+import Biofr from '../components/bio_fr.md';
+import Bio from '../components/bio.md';
+
+const { lang = "en" } = Astro.props; // récupère la langue
+const t = translations[lang];       // objet des traductions
+const Aboutme = lang === "fr" ? Biofr : Bio;
+---
+
+<section
+   id="about"
+   class="font-garamond mx-auto flex items-center gap-10 py-16 scroll-mt-32 max-w-6xl px-6 lg:flex-row flex-col"
+>
+   <!-- Image -->
+<img
+   src={essec3.src}
+   alt="Portrait of Leonel Tiague"
+   class="rounded-xl shadow-lg lg:w-1/2 w-full max-w-md h-[350px] object-cover object-top"
+/>
+
+   <!-- Texte -->
+   <div class="flex flex-col justify-center text-center lg:text-left lg:w-1/2">
+      <h2 class="text-4xl lg:text-5xl font-semibold leading-tight">
+         {t.about_title_intro}
+         <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-orange-500 to-orange-400">
+            Leonel
+         </span>
+      </h2>
+
+<div id="projects" class="flex justify-center mt-8">
+  <div class="border-2 border-gray-300 rounded-lg shadow-lg bg-black text-gray-100 p-6 max-w-3xl">
+    <Aboutme />
+  </div>
+</div>
+   </div>
+</section>
+

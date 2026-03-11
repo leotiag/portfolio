@@ -1,0 +1,20 @@
+---
+import Domotique_fr from '../components/domotique.md';
+import Domotique from '../components/domotique_en.md';
+import { translations } from "../i18n/translations";
+
+const { lang = "en" } = Astro.props; // récupère la langue
+const t = translations[lang];       // objet des traductions
+const Private = lang === "fr" ? Domotique_fr : Domotique;
+---
+<div
+   class="scroll-mt-36 w-[75%] mx-auto mt-20 mb-10"
+   id="particulier"
+>
+   <h2 class="cursor-pointer font-bold w-fit md:mx-0 md:ml-5 sm:text-5xl xs:text-[20px] xs:mx-auto">{t.person}{t.particulier} ?</h2>
+
+<div id="projects" class="flex justify-center mt-8">
+  <div class="border-2 border-gray-300 rounded-lg shadow-lg bg-black text-gray-100 p-6 max-w-3xl">
+    <Private />
+  </div>
+</div>

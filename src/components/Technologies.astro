@@ -1,0 +1,59 @@
+---
+import { technologies } from '../assets/data';
+import { technologies_fr } from '../assets/data';
+import TechnologyCard from './TechnologyCard.astro';
+import { translations } from "../i18n/translations";
+
+const { lang = "en" } = Astro.props; // récupère la langue
+const t = translations[lang];       // objet des traductions
+const techList = lang === "fr" ? technologies_fr : technologies;
+//alternative sans avoir à créer la variable techList
+//(lang === "fr" ? technologies_fr : technologies).map(...) 
+---
+
+<div
+   class="w-[75%] mx-auto mt-20 mb-10"
+   data-tech-h1
+>
+   <h2 class="cursor-pointer font-bold w-fit md:mx-0 md:ml-5 sm:text-5xl xs:text-[20px] xs:mx-auto"> {t.technologies_title}</h2>
+</div>
+
+<!--=============== Slider ===============-->
+<div
+   class="overflow-x-hidden whitespace-nowrap cursor-pointer"
+   data-tech-wrapper
+>
+   <div class="tech-card inline-block">
+      {
+         techList.map((tech) => (
+            <div class="inline-block m-0">
+               <TechnologyCard
+                  text={tech.text}
+                  logo={tech.logo}
+               />
+            </div>
+         ))
+      }
+   </div>
+</div>
+<!--=============== Modal ===============-->
+<div
+   class="w-screen h-screen bg-black/70 fixed top-0 left-0 z-[100] justify-center items-center hidden"
+   data-tech-modal
+>
+   <div
+      class="tech-modal w-4/5 h-[70%] overflow-y-auto flex flex-wrap justify-center items-center gap-x-5 gap-y-4 bg-violet-600"
+      data-tech-stop
+   >
+      {
+         techList.map((tech) => (
+            <div class="inline-block m-0">
+               <TechnologyCard
+                  text={tech.text}
+                  logo={tech.logo}
+               />
+            </div>
+         ))
+      }
+   </div>
+</div>
