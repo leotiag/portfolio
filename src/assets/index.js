@@ -49,7 +49,7 @@ document.addEventListener('astro:page-load', () => {
       btn.textContent = 'Sending...';
 
       const serviceID = 'service_92bpq0b';
-      const templateID = 'template_lu8bkzn';
+      const templateID = 'template_pw7lfos';
 
       emailjs.sendForm(serviceID, templateID, this).then(
          () => {
