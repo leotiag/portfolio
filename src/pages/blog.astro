@@ -4,58 +4,102 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Mon projet">
 
-  <!-- Container centré avec padding -->
-  <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+<main class="max-w-3xl mx-auto px-6 py-20">
 
-    <!-- Titre -->
-    <h1 class="text-5xl font-extrabold mb-8 text-gray-900 dark:text-white">
-      Tout le monde pratique l’ingénierie système… même toi!
+  <!-- Titre -->
+  <header class="text-center mb-14">
+
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-6 text-gray-900 dark:text-white leading-tight">
+      Tout le monde pratique l’ingénierie système… même toi !
     </h1>
 
-    <!-- Description -->
-    <p class="text-lg text-gray-700 dark:text-gray-300 mb-12 leading-relaxed">
-<section class="projet-description max-w-4xl mx-auto px-6 py-12 text-gray-800 dark:text-gray-200 text-left">
-  <h2 class="text-3xl font-bold mb-6">L’ingénierie système</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-400">
+      Une explication simple d’un concept utilisé dans l’aéronautique, le spatial ou les grandes infrastructures.
+    </p>
 
-  <p class="mb-4">
-    L’ingénierie système, aussi appelée ingénierie des systèmes complexes, est l’art d’organiser de nombreux éléments différents afin qu’ils fonctionnent ensemble correctement, du début à la fin de leur cycle de vie.
-  </p>
+  </header>
 
-  <p class="mb-4">
-    Imaginez qu’on doive créer et faire fonctionner une ligne de métro : il faut gérer les rames, les rails, l’électricité, les logiciels, les équipes de maintenance, les règles de sécurité, l’information voyageurs, le budget, et bien plus encore.
-  </p>
 
-  <p class="mb-4">
-    L’ingénierie des systèmes complexes consiste à penser à tout cela simultanément, à découper le problème en morceaux compréhensibles, puis à s’assurer que tous ces éléments s’assemblent correctement et continuent de fonctionner ensemble dans le temps.
-  </p>
+  <!-- Article -->
+  <article class="text-gray-800 dark:text-gray-200 text-lg leading-relaxed space-y-6">
 
-  <h3 class="text-2xl font-semibold mt-6 mb-4">Concrètement, l’ingénieur système :</h3>
-  <ul class="list-disc list-inside mb-6 space-y-2">
-    <li>Clarifie les besoins réels des personnes concernées (usagers, clients, autorités…).</li>
-    <li>Imagine plusieurs solutions possibles, compare leurs avantages et inconvénients, et choisit la plus adaptée aux contraintes (coût, délais, sécurité, environnement…).</li>
-    <li>Coordonne les spécialistes (électronique, mécanique, logiciel, organisation, etc.) pour que leurs pièces s’intègrent sans conflit.</li>
-    <li>Vérifie, tout au long du projet, que le système final répond bien au besoin et reste fiable dans la durée.</li>
-  </ul>
+    <h2 class="text-2xl md:text-3xl font-bold mt-6">
+      L’ingénierie système
+    </h2>
 
-  <h3 class="text-2xl font-semibold mt-6 mb-4">Exemples dans la vie quotidienne :</h3>
-  <ul class="list-disc list-inside space-y-2">
-    <li>
-      <strong>Organiser un mariage :</strong> budget, lieu, traiteur, animations, invités, timing, imprévus… L’ingénieur système serait le wedding planner qui anticipe les interactions et vérifie que tout roule le jour J.
-    </li>
-    <li>
-      <strong>Une équipe de football :</strong> joueurs, tactique, coach, matériel, état physique, adversaire… L’entraîneur joue ce rôle en alignant les compétences pour un jeu fluide.
-    </li>
-  </ul>
-</section></p>
+    <p>
+      L’ingénierie système, aussi appelée ingénierie des systèmes complexes, est l’art d’organiser de nombreux éléments différents afin qu’ils fonctionnent ensemble correctement, du début à la fin de leur cycle de vie.
+    </p>
 
-    <!-- Bouton Retour -->
+    <p>
+      Imaginez qu’on doive créer et faire fonctionner une ligne de métro : il faut gérer les rames, les rails, l’électricité, les logiciels, les équipes de maintenance, les règles de sécurité, l’information voyageurs, le budget, et bien plus encore.
+    </p>
+
+    <p>
+      L’ingénierie des systèmes complexes consiste à penser à tout cela simultanément, à découper le problème en morceaux compréhensibles, puis à s’assurer que tous ces éléments s’assemblent correctement et continuent de fonctionner ensemble dans le temps.
+    </p>
+
+
+    <h3 class="text-xl md:text-2xl font-semibold mt-10">
+      Concrètement, l’ingénieur système :
+    </h3>
+
+    <ul class="list-disc pl-6 space-y-2">
+
+      <li>
+        Clarifie les besoins réels des personnes concernées (usagers, clients, autorités…).
+      </li>
+
+      <li>
+        Imagine plusieurs solutions possibles, compare leurs avantages et inconvénients, et choisit la plus adaptée aux contraintes (coût, délais, sécurité, environnement…).
+      </li>
+
+      <li>
+        Coordonne les spécialistes (électronique, mécanique, logiciel, organisation, etc.) pour que leurs pièces s’intègrent sans conflit.
+      </li>
+
+      <li>
+        Vérifie, tout au long du projet, que le système final répond bien au besoin et reste fiable dans la durée.
+      </li>
+
+    </ul>
+
+
+    <h3 class="text-xl md:text-2xl font-semibold mt-10">
+      Exemples dans la vie quotidienne
+    </h3>
+
+    <ul class="list-disc pl-6 space-y-3">
+
+      <li>
+        <strong>Organiser un mariage :</strong>
+        budget, lieu, traiteur, animations, invités, timing, imprévus…  
+        L’ingénieur système serait le wedding planner qui anticipe les interactions et vérifie que tout fonctionne le jour J.
+      </li>
+
+      <li>
+        <strong>Une équipe de football :</strong>
+        joueurs, tactique, coach, matériel, état physique, adversaire…  
+        L’entraîneur joue ce rôle en alignant les compétences pour un jeu fluide.
+      </li>
+
+    </ul>
+
+  </article>
+
+
+  <!-- Bouton retour -->
+  <div class="text-center mt-16">
+
     <a
       href="/"
-      class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition-colors duration-300"
+      class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300"
     >
       ← Retour à l'accueil
     </a>
 
   </div>
+
+</main>
 
 </Layout>
